@@ -30,9 +30,9 @@ const userSchema = new mongoose.Schema({
   }
 });
 
-// Index for faster queries
-userSchema.index({ email: 1 });
-userSchema.index({ username: 1 });
+// Removed redundant index definitions
+// userSchema.index({ email: 1 });
+// userSchema.index({ username: 1 });
 
 const User = mongoose.models.User || mongoose.model('User', userSchema);
 
