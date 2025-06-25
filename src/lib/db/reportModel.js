@@ -38,6 +38,16 @@ const reportSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  images: [{
+    url: {
+      type: String,
+      required: true
+    },
+    publicId: {
+      type: String,
+      required: true
+    }
+  }],
   createdAt: {
     type: Date,
     default: Date.now
